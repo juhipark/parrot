@@ -47,8 +47,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # We use WhiteNoise to serve static files (index.html) using gunicorn
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # We use WhiteNoise to serve static files (index.html). See
+    # /backend/middleware.py. We redirect any 404 errors to our frontend
+    # application so it can render the page 404.
+    'backend.middleware.StaticFilesServingMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
