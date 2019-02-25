@@ -13,6 +13,7 @@ $landing-msg-font-size: 54px;
       margin-bottom: $landing-msg-font-size;
       text-align: center;
       width: 100%;
+      text-align: center;
 
       @include breakpoint-mobile-m-only {
         $landing-msg-font-size: 25px;

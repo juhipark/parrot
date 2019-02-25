@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 import Logo from './logo'
 
@@ -9,6 +10,9 @@ class GuestNav extends React.Component {
     return (
       <div className='guest-nav'>
         <Logo />
+        <div className='links'>
+          <NavLink to='/about' activeClassName='active'>About</NavLink>
+        </div>
       </div>
     );
   }

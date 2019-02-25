@@ -6,6 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
+import AboutPage from './about/about';
 import LandingPage from './landing/landing';
 import Page404 from './page404/page404';
 
@@ -18,6 +19,7 @@ class App extends React.Component {
         <div>
           <Switch>
             <Route exact path='/' component={LandingPage} />
+            <Route exact path='/about' component={AboutPage} />
             <Route component={Page404} />
           </Switch>
         </div>
