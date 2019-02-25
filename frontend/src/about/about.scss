@@ -17,6 +17,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 600px;
+
+      p {
+        $margin-size: 5vw;
+        margin-left: $margin-size;
+        margin-right: $margin-size;
+      }
     }
 
     .right-panel {
